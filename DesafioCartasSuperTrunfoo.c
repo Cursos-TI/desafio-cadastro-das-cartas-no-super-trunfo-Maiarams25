@@ -10,6 +10,8 @@ int main() {
     float Area1;
     float PIB1;
     int PontosTuristico1;
+    float DensidadePopulacional1;
+    float PIBperCapita1;
 
     //Variaveis da segunda carta
     char estado2;
@@ -19,6 +21,8 @@ int main() {
     float Area2;
     float PIB2;
     int PontosTuristico2;
+    float DensidadePopulacional2;
+    float PIBperCapita2;
 
     printf("**BEM VINDO AO JOGO SUPER TRIUNFO**\n");
     printf("\n");
@@ -48,6 +52,10 @@ int main() {
     scanf("%d", &PontosTuristico1);
     printf("\n");
 
+    // CALCULOS DA CARTA 1 
+    DensidadePopulacional1 = (float)populacao1 / Area1; 
+    PIBperCapita1 = PIB1 / populacao1;
+
 
     // Entrada dos dados da segunda carta
     printf("Dados da segunda carta\n");
@@ -73,6 +81,10 @@ int main() {
     scanf("%d", &PontosTuristico2);
     printf("\n");
 
+    // CALCULOS DA CARTA 2  
+    DensidadePopulacional2 = (float)populacao2 / Area2; 
+    PIBperCapita2 = PIB2 / populacao2;
+
 
 
     // EXIBIÇÃO DOS DADOS DA PRIMEIRA CARTA
@@ -83,17 +95,8 @@ int main() {
     printf("Area1: %f\n", Area1);
     printf("PIB1: %f\n", PIB1);
     printf("Pontos Turistico: %d\n", PontosTuristico1);
-    printf("\n");
-
-
-// EXIBIÇÃO DOS DADOS DA PRIMEIRA CARTA
-    printf("estado: %c\n", estado1);
-    printf("Código: %s\n", codigo1);
-    printf("Cidade: %s\n", cidade1);
-    printf("Populacao: %d\n", populacao1);
-    printf("Area1: %f\n", Area1);
-    printf("PIB1: %f\n", PIB1);
-    printf("Pontos Turistico: %d\n", PontosTuristico1);
+    printf("Densidade Populacional: %.2f\n", DensidadePopulacional1); 
+    printf("PIB per Capita: %.2f\n", PIBperCapita1);
     printf("\n");
 
 
@@ -105,6 +108,8 @@ int main() {
     printf("Area1: %f\n", Area2);
     printf("PIB1: %f\n", PIB2);
     printf("Pontos Turistico: %d\n", PontosTuristico2);
+    printf("Densidade Populacional: %.2f\n", DensidadePopulacional2); 
+    printf("PIB per Capita: %.2f\n", PIBperCapita2);
     printf("\n");
 
 
